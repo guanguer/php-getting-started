@@ -69,7 +69,8 @@ function getBooks() {
             'description' => 'A novel exploring futuristic society and the loss of individuality.',
             'pages' => 268
         ]
-    ];
+  ];
+  return $books;
 }
 
 $app->run();
