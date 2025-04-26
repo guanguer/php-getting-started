@@ -36,7 +36,7 @@ $app->get('/', function(Request $request, Response $response, LoggerInterface $l
   return $twig->render($response, 'index.twig');
 });
 
-$app->get('/books', function(Request $request, Response $response, LoggerInterface $logger, Twig $twig, PDO $pdo) {
+$app->get('/books', function(Request $request, Response $response, LoggerInterface $logger, Twig $twig) {
     $books = getBooks();
     return $twig->render($response, 'books.twig', [
       'books' => $books,
